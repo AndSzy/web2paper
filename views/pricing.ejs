@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+    <!-- ========== main start ========== -->
+    <div class="container-md outer-wrapper pricing">
+
+        <div class="inner-wrapper">
+            <h2 class="title">Please Select a Pricing Plan</h2>
+
+            <div class="pricing-wrapper">
+                <p>
+                    Please sign up to convert unlimited
+                </p>
+
+                <div class="plans-wrapper">
+                    <div class="card-style-3">
+                        <div class="card-content">
+                            <h4>Free</h4>
+                            <p>
+                                £0/Month
+                            </p>
+                            <input class="form-check-input" type="radio" name="freePlan" id="freePlan" checked>
+
+                        </div>
+                    </div>
+                    <div class="card-style-3">
+                        <div class="card-content">
+                            <h4>Premium</h4>
+                            <p>
+                                £5/Month
+                            </p>
+                            <input class="form-check-input" type="radio" name="premiumPlan" id="premiumPlan" disabled>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="buttons-wrapper">
+                    <button type="button" class="main-btn primary-btn rounded-full btn-hover" onclick="window.location.href ='/signup'">Submit</button>
+                    <a href="/login" >Already have an account?</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- ========== main end ========== -->
+    <%- include('partials/footer') %>

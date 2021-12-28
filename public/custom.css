@@ -1,0 +1,234 @@
+body {
+    background-color: #fff;
+}
+
+
+header a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #787878;
+    text-decoration: none;
+}
+
+header .profile-box a:hover {
+    color: #4a6cf7;
+}
+
+header .header-left a {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+header .header-right a {
+    margin-right: 50px;
+}
+
+.outer-wrapper {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 46px;
+}
+
+.inner-wrapper {
+    width: 75%;
+}
+
+.icons-wrapper {
+    padding-top: 100px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .icons-wrapper .holder {
+    padding: 0 5px;
+} */
+
+.icons-wrapper .icon-wrapper {
+    text-align: center;
+    font-size: 32px;
+    color: rgb(74, 108, 247);
+}
+
+.icons-wrapper p {
+    max-width: 166px;
+    padding-top: 15px;
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+/* footer */
+footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+footer a {
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #787878;
+    text-decoration: none;
+}
+
+/* Media querries */
+
+@media (max-width: 992px) {
+    .icons-wrapper p {
+        max-width: 70%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .inner-wrapper {
+        width: 100%;
+    }
+
+    .inner-wrapper button {
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+    
+}
+
+/* less than 576 */
+@media (max-width: 576px) {
+    .outer-wrapper {
+        padding: 0 10px;
+    }
+    .icons-wrapper {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .icons-wrapper>div {
+        display: flex;
+        padding-bottom: 10px;
+        padding-left: 5px;
+    }
+
+    .icons-wrapper p {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 0;
+        margin: auto 0 auto 15px;
+        max-width: 100%;
+    }
+
+    footer a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* TERMS */
+
+.outer-wrapper.terms {
+    padding: 0 10px 10px;
+}
+
+.terms h1, .terms h4 {
+    margin: 20px 0;
+}
+.terms p {
+    margin: 15px 0;
+}
+
+/* PRICING  */
+
+.pricing .inner-wrapper h2 {
+    text-align: center;
+}
+
+.pricing-wrapper {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricing-wrapper p {
+    text-align: center;
+}
+
+.pricing-wrapper .plans-wrapper {
+    /* height: 200px; */
+    display: flex;
+    justify-content: center;
+    /* margin: 10px 0; */
+}
+
+.pricing-wrapper .plans-wrapper>div {
+    margin: 20px;
+}
+
+.pricing-wrapper .plans-wrapper .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-wrapper .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-wrapper .buttons-wrapper button {
+    width: 390px;
+    margin-bottom: 10px;
+}
+
+.pricing-wrapper .buttons-wrapper a {
+    color: #787878;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .info i {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.info h5 {
+    font-weight: 600;
+}
+
+.header {
+    padding: 25px 0;
+    background: #f1f5f9;
+}
+
+.dropdown-menu {
+    background: #fff;
+}
+
+.input-style-1 input {
+    transition: border 0.3s;
+    background: rgba(74, 108, 247, 0.1);
+    border: 1px solid #dfe0e1;
+}
+
+
+.modal .modal-header .modal-title i {
+    font-size: 20px;
+    margin-right: 10px;
+} */
