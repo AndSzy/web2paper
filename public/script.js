@@ -1,13 +1,13 @@
-// const adminFormEl = document.getElementById('admin-form');
+console.log("script");
+const urlFormEl = document.getElementById('url-form');
 
-// adminFormEl.addEventListener('submit', function (event) {
-//     if (!adminFormEl.checkValidity()) {
-//       event.preventDefault()
-//       event.stopPropagation()
-//     }
-
-//     adminFormEl.classList.add('was-validated')
-//   }, false)
+urlFormEl.addEventListener('submit', function (event) {
+    if (!urlFormEl.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    urlFormEl.classList.add('was-validated');
+  }, false)
 
 //   if (document.getElementById('myModal')) {
 //     var myModal = new bootstrap.Modal(document.getElementById('myModal'));

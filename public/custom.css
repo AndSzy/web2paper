@@ -2,7 +2,6 @@ body {
     background-color: #fff;
 }
 
-
 header a {
     font-size: 14px;
     line-height: 18px;
@@ -33,8 +32,21 @@ header .header-right a {
     padding: 0 46px;
 }
 
+.outer-wrapper .primary-btn {
+    font-size: 16px;
+    background: #3258f6;
+}
+
 .inner-wrapper {
     width: 75%;
+}
+
+.inner-wrapper .download-link-holder {
+    text-align: center;
+}
+
+.inner-wrapper .download-link-holder a {
+    width: 100%;
 }
 
 .icons-wrapper {

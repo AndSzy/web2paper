@@ -7,7 +7,7 @@ const { v1: uuidv1} = require('uuid');
 // AZURE BLOB
 const { BlobServiceClient } = require('@azure/storage-blob');
 
-async function saveToAzure(blobdata) {
+async function saveToAzure(blobdata, name) {
     const AZURE_STORAGE_CONNECTION_STRING = process.env.AZURE_STORAGE_CONNECTION_STRING;
 
     // Create the BlobServiceClient object which will be used to create a container client
@@ -26,7 +26,7 @@ async function saveToAzure(blobdata) {
     console.log("Container was created successfully. requestId: ", createContainerResponse.requestId);
 
     // Create a unique name for the blob
-    const blobName = 'test'+ Date.now().toString() + '.pdf';
+    const blobName = name + '.pdf';
     // const blobName = 'quickstart' + uuidv1() + '.pdf';
     // Get a block blob client
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);

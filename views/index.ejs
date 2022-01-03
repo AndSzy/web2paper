@@ -6,13 +6,21 @@
         <div class="inner-wrapper">
             <form action="/" method="post" id="url-form" class="needs-validation" novalidate>
                 <div class="input-group input-style-1">
-                    <input autocomplete="off" type="url" class="form-control" placeholder="www.webadress.com" name="url"
-                        autofocus>
+                    <input autocomplete="off" type="url" class="form-control" placeholder="https://example.com" required name="url" autofocus>
+                    <div class="invalid-tooltip">
+                        Please enter a valid URL.
+                      </div>
                     <button type="submit" class="main-btn primary-btn rounded-full btn-hover">Submit</button>
-                </div>
+                    
+                </div> 
             </form>
             <!-- <button type="button" onclick="savePDF()">Save PDF</button> -->
-            <!-- <a href="/save" >Save PDF</a> -->
+            <!-- <a href="https://andrzejazurestorage.blob.core.windows.net/test/quickstart1.pdf">Save PDF</a> -->
+            <% if (blobName) { %>
+                <div class="download-link-holder">
+                    <a class="main-btn primary-btn rounded-full btn-hover" href=<%="https://andrzejazurestorage.blob.core.windows.net/test/"+blobName+".pdf" %> >Download Your PDF File</a>
+                </div>
+            <% } %>
 
             <div class="icons-wrapper">
 

@@ -15,43 +15,35 @@ const storage = require('./storage');
 app.use(express.urlencoded());
 
 
-
 //  -- TEST
 
-app.get('/test', (req, res) => {
-
-  // scrapper.printPDF('http://lechia.gda.pl/news/28912/');
-
-  (async () => {
-    let pdf = await scrapper.printPDF('http://lechia.gda.pl/news/28912/');
-
-    storage.saveToAzure(pdf).then(() => console.log('Done')).catch((ex) => console.log(ex.message));
-  })();
-
-  res.render('index');
-})
+// https://andrzejazurestorage.blob.core.windows.net/test/
 
 // --------- GOOD
 
 app.post('/', (req, res) => {
   console.log(req.body);
-  // scrapper.printPDF(req.body.url);
-  // res.render('index'); 
+
+  let domain = (new URL(req.body.url));
+  let blobName = domain.hostname + Date.now().toString();
+
   (async () => {
     let pdf = await scrapper.printPDF(req.body.url);
 
-    storage.saveToAzure(pdf).then(() => console.log('Done')).catch((ex) => console.log(ex.message));
+    storage.saveToAzure(pdf,blobName).then(() => res.render('index', {blobName: blobName})).catch((ex) => console.log(ex.message));
 
-    res.render('index');
+    // res.render('index');
   })();
 
-  
+   // unique name for blob that can be reused to get the blob address
+    // show modal success/error
+    // show btn with address to the blob file 
 
 })
 
 
 app.get('/', function (req, res) {  
-    res.render('index'); 
+    res.render('index', {blobName: false}); 
   })
 
 app.get('/terms', (req, res) => {  
